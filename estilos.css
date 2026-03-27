@@ -1,0 +1,41 @@
+body{
+    background-color:beige; 
+    
+}
+button{
+    background-color: #7EDB45;
+    border: 1.5px;
+    border-color: crimson;
+    border-radius: 5px;
+    color: white;
+
+}
+
+button:hover{
+    background-color: aqua;
+    color:black;
+}
+.btnSuccess{
+    background-color: black;
+    color: white;
+}
+
+p{
+    text-align:center ;
+    padding: 10px;
+    font-size: 100px;
+    font-weight:bold ;
+    font-family: 'Franklin Gothic Medium', 'Arial Narow',Arial, sans-serif;
+}
+
+h1{
+    text-align:center ;
+    padding: 10px;
+    font-size: 150px;
+    font-weight:bold ;
+    font-family: 'Franklin Gothic Medium', 'Arial Narow',Arial, sans-serif;
+}
+img{
+    display: block;
+    margin: 0 auto;
+}

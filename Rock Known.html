@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Rock Known - Oficial</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #000;/*para el color de fondo de la pagina web*/
+            color: white;/**/
+            margin: 0;
+            min-height: 120vh;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .bg-rock-overlay {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background-image: url('https://i.scdn.co/image/ab6761610000e5eb46d0db8a86fda630ec12401f');
+            background-size: cover;
+            background-position: center;
+            filter: blur(12px) brightness(0.3);
+            z-index: -1;
+        }
+
+        .navbar {
+            background-color: rgba(204, 0, 0, 0.9) !important;
+            backdrop-filter: blur(5px);
+            margin-top: 30px;
+            border-radius: 15px;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .logo-square {
+            width: 65px;
+            height: 65px;
+            object-fit: cover;
+            border: 2px solid white;
+            border-radius: 4px;
+        }
+
+        .hero-section {
+            height: 80vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            animation: fadeInTransform 1.2s ease-out;
+        }
+
+        @keyframes fadeInTransform {
+            from { opacity: 0; transform: scale(0.9) translateY(30px); }
+            to { opacity: 1; transform: scale(1) translateY(0); }
+        }
+
+        /* Botón de Spotify */
+        .btn-spotify {
+            background-color: #1DB954;/*FOndo o color del boton*/
+            color: black;/*color del las letras*/
+            border: none;
+            padding: 15px 40px;
+            font-weight: bold;
+            font-size: 1.2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            transition: 0.3s;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .btn-spotify:hover {
+            background-color: white;/*color del boton*/
+            color: #1DB954;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="bg-rock-overlay"></div>
+
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-dark shadow-lg px-3">
+            <div class="container-fluid">
+                <a class="navbar-brand d-flex align-items-center" href="Rock Known.html">
+                    <img src="https://piotrrozalskigraphicsdesign.wordpress.com/wp-content/uploads/2015/09/rock-logo-1.jpg" alt="Logo" class="logo-square me-3">
+                    <span class="fw-bold h3 m-0">ROCK KNOWN</span>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto align-items-center">
+                        <li class="nav-item"><a class="nav-link active" href="Rock Known.html">HOME</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#modalSalir">SALIR</a></li>
+                        <li class="nav-item ms-lg-3">
+                            <a class="nav-link text-white fw-bold bg-dark px-3 rounded-pill border border-danger" href="Lista de Bandas.html">LISTA DE BANDAS</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <header class="hero-section">
+            <h1 class="display-1 fw-bold text-uppercase">Bienvenido</h1>
+            <p class="display-6 italic mb-4">Descubre tu banda con nosotros</p>
+            
+            <a href="https://open.spotify.com" target="_blank" class="btn-spotify">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16">
+                    <path d="M8 0a8 8 0 1 0 8 8A8 8 0 0 0 8 0zm3.669 11.538a.498.498 0 0 1-.686.165c-1.879-1.147-4.243-1.407-7.028-.77a.499.499 0 0 1-.222-.973c3.048-.696 5.662-.397 7.77.892a.5.5 0 0 1 .166.686zm.979-2.178a.624.624 0 0 1-.858.205c-2.15-1.321-5.428-1.704-7.972-.932a.625.625 0 0 1-.362-1.194c2.905-.881 6.517-.454 8.986 1.063a.624.624 0 0 1 .206.858zm.084-2.268C10.154 5.56 5.9 5.419 3.438 6.166a.748.748 0 1 1-.434-1.432c2.825-.857 7.523-.692 10.492 1.07a.747.747 0 1 1-.764 1.288z"/>
+                </svg>
+                Ir a Spotify
+            </a>
+        </header>
+    </div>
+
+    <div class="modal fade" id="modalSalir" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content bg-dark text-white border-danger border-2 shadow-lg">
+                <div class="modal-header border-danger">
+                    <h5 class="modal-title">ROCK KNOWN</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body text-center py-4">
+                    ¿Quieres salir de la página?
+                </div>
+                <div class="modal-footer border-0 justify-content-center">
+                    <button type="button" class="btn btn-outline-light" data-bs-dismiss="modal">Regresar</button>
+                    <a href="https://google.com" class="btn btn-danger px-4">Sí, salir</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
