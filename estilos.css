@@ -1,40 +1,146 @@
-body{
-    background-color:beige; 
-    
-}
-button{
-    background-color: #7EDB45;
-    border: 1.5px;
-    border-color: crimson;
-    border-radius: 5px;
-    color: white;
+/* ====================== ESTILOS GENERALES ====================== */
 
-}
-
-button:hover{
-    background-color: aqua;
-    color:black;
-}
-.btnSuccess{
-    background-color: black;
-    color: white;
+body {
+    /* Establece los estilos para todo el cuerpo de la página */
+    margin: 0;                    /* Elimina los márgenes predeterminados del navegador */
+    padding: 0;                   /* Elimina el relleno predeterminado */
+    background-color: #1a1a1a;    /* Color de fondo oscuro */
+    background-image:url('https://i.scdn.co/image/ab67616d0000b273f5184c2cf79c36b6fb139520');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: Arial, sans-serif; /* Fuente por defecto para todo el texto */
+    color: white;                 /* Color de texto blanco por defecto */
 }
 
-p{
-    text-align:center ;
-    padding: 10px;
-    font-size: 100px;
-    font-weight:bold ;
-    font-family: 'Franklin Gothic Medium', 'Arial Narow',Arial, sans-serif;
+/* ====================== NAVBAR ====================== */
+
+.navbar {
+    /* Estilos para la barra de navegación */
+    position: sticky;             /* Hace que el navbar se quede fijo arriba al hacer scroll */
+    top: 0;                       /* Lo pega en la parte superior de la pantalla */
+    background-color: rgba(30, 30, 30, 0.95); /* Fondo semi-transparente oscuro */
+    backdrop-filter: blur(12px);  /* Aplica efecto de desenfoque (glassmorphism) */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Línea fina debajo del navbar */
+    padding: 0 5%;                /* Espacio a los lados */
+    height: 70px;                 /* Altura fija del navbar */
+    display: flex;                /* Usa flexbox para alinear elementos horizontalmente */
+    align-items: center;          /* Centra verticalmente los elementos dentro del navbar */
+    justify-content: space-between; /* Separa el logo de los enlaces */
+    z-index: 1000;                /* Asegura que el navbar esté por encima de otros elementos */
 }
 
-h1{
-    text-align:center ;
-    padding: 10px;
-    font-size: 150px;
-    font-weight:bold ;
-    font-family: 'Franklin Gothic Medium', 'Arial Narow',Arial, sans-serif;
+.logo {
+    /* Estilos del logo "My Music" */
+    font-size: 1.8rem;            /* Tamaño grande del texto */
+    font-weight: bold;            /* Texto en negrita */
+    color: #ff3366;               /* Color rosa/rojo vibrante */
 }
+
+.nav-links {
+    /* Estilos de la lista de enlaces */
+    list-style-type: none;        /* Elimina los puntos (bullets) de la lista */
+    margin: 0;                    /* Elimina márgenes externos */
+    padding: 0;                   /* Elimina relleno interno */
+    display: flex;                /* Alinea los elementos horizontalmente */
+    gap: 8px;                     /* Espacio entre cada enlace */
+}
+
+.nav-links li a {
+    /* Estilos de cada enlace del menú */
+    display: block;               /* Convierte el enlace en un bloque para mejor clic */
+    padding: 12px 20px;           /* Espacio interno alrededor del texto */
+    color: white;                 /* Color del texto */
+    text-decoration: none;        /* Quita el subrayado de los enlaces */
+    font-size: 1.1rem;            /* Tamaño del texto */
+    border-radius: 6px;           /* Bordes redondeados */
+    transition: all 0.3s ease;    /* Suaviza los cambios de estilo al pasar el mouse */
+}
+
+.nav-links li a:hover {
+    /* Estilos cuando el mouse pasa sobre un enlace */
+    background-color: #ff3366;    /* Cambia el color de fondo */
+    transform: translateY(-2px);  /* Levanta un poco el enlace (efecto hover) */
+}
+
+/* ====================== PÁGINA DE INICIO ====================== */
+
+h1 {
+    /* Estilos del título principal en index.html */
+    text-align: center;           /* Centra el texto */
+    margin-top: 100px;            /* Espacio superior grande */
+    font-size: 3rem;              /* Tamaño muy grande */
+    color: #ff3366;               /* Color rosa/rojo */
+}
+
+/* ====================== PÁGINA DE BANDAS ====================== */
+
+.hero {
+    /* Sección con imagen de fondo grande */
+    height: 400px;                    /* Altura de la sección */
+    background-size: cover;           /* La imagen cubre todo el espacio disponible */
+    background-position: center;      /* Centra la imagen */
+    display: flex;                    /* Usa flexbox para centrar el título */
+    align-items: center;              /* Centra verticalmente */
+    justify-content: center;          /* Centra horizontalmente */
+    text-align: center;               /* Alinea el texto al centro */
+    margin-bottom: 40px;              /* Espacio debajo de la sección */
+}
+
+.hero-title {
+    /* Título que aparece sobre la imagen de fondo */
+    font-size: 3.5rem;                /* Tamaño grande */
+    text-shadow: 0 0 15px rgba(0, 0, 0, 0.7); /* Sombra para que se lea mejor sobre la imagen */
+    color: white;                     /* Color blanco */
+}
+
+.bands-container {
+    /* Contenedor que organiza todas las tarjetas de bandas */
+    max-width: 1200px;                /* Ancho máximo del contenedor */
+    margin: 0 auto;                   /* Centra el contenedor */
+    padding: 20px;                    /* Espacio interno */
+    display: flex;                    /* Usa flexbox */
+    flex-wrap: wrap;                  /* Permite que las tarjetas bajen de línea si no caben */
+    gap: 20px;                        /* Espacio entre tarjetas */
+    justify-content: center;          /* Centra las tarjetas */
+}
+
+.band-card {
+    /* Estilos de cada tarjeta individual de banda */
+    background-color: #252525;        /* Fondo gris oscuro */
+    border-radius: 12px;              /* Bordes redondeados */
+    width: 280px;                     /* Ancho fijo de cada tarjeta */
+    overflow: hidden;                 /* Oculta lo que se salga de la tarjeta */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4); /* Sombra suave */
+    transition: transform 0.3s ease;  /* Suaviza el efecto al pasar el mouse */
+}
+
+.band-card:hover {
+    /* Efecto cuando el mouse pasa sobre una tarjeta */
+    transform: scale(1.05);           /* Hace que la tarjeta se agrande un poco */
+}
+
+.band-card img {
+    /* Estilos de la imagen dentro de la tarjeta */
+    width: 100%;                      /* Ocupa todo el ancho de la tarjeta */
+    height: 200px;                    /* Altura fija de la imagen */
+    object-fit: cover;                /* La imagen se ajusta sin deformarse */
+}
+
+.band-card h3 {
+    /* Nombre de la banda */
+    padding: 15px 15px 5px;           /* Espacio interno */
+    margin: 0;                        /* Sin margen */
+    color: #ff3366;                   /* Color rosa */
+}
+
+.band-card p {
+    /* Descripción de la banda */
+    padding: 0 15px 15px;             /* Espacio interno */
+    margin: 0;                        /* Sin margen */
+    color: #ccc;                      /* Color gris claro */
+}
+
 img{
     display: block;
     margin: 0 auto;
