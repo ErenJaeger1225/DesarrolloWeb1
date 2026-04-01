@@ -1,5 +1,5 @@
 body{
-    background-color:beige; 
+    background-color:gray; 
     
 }
 button{
@@ -40,6 +40,70 @@ img{
     margin: 0 auto;
 }
 
-form{
-    margin: 15px;
+form {
+    text-align: center;                    /* Mantiene el formulario centrado en la página */
+    margin: 0 auto;                        /* Centra el formulario horizontalmente */
+    max-width: 600px;                      /* Evita que se haga demasiado ancho en pantallas grandes */
+    padding: 30px 40px;                    /* Espacio interno agradable */
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: #f5e8c7;             /* Beige claro y suave (combina muy bien) */
+    border-radius: 15px;                   /* Bordes redondeados */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Sombra suave para dar profundidad */
 }
+
+/* ==================== ESTILOS PARA LOS LABELS (títulos) ==================== */
+label {
+    display: block;                        /* Cada label en una línea completa */
+    text-align: left;                      /* Los textos de los labels se alinean a la izquierda */
+    margin-bottom: 8px;                    /* Espacio debajo del label */
+    font-weight: bold;                     /* Negrita para que resalten */
+    color: #3c2f1e;                        /* Color marrón oscuro elegante que combina perfecto con beige */
+}
+
+/* ==================== ESTILOS PARA LOS INPUTS Y TEXTAREA ==================== */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+textarea {
+    width: 100%;                           /* Ocupan todo el ancho disponible */
+    padding: 12px 15px;                    /* Espacio interno cómodo */
+    margin-bottom: 20px;                   /* Espacio entre campos */
+    border: 2px solid #d4b88a;             /* Borde en tono beige más oscuro */
+    border-radius: 8px;                    /* Bordes redondeados */
+    font-size: 16px;                       /* Tamaño de letra cómodo */
+    background-color: white;               /* Fondo blanco para los campos */
+    box-sizing: border-box;                /* Para que el padding no afecte el ancho */
+}
+
+textarea {
+    resize: vertical;                      /* Permite cambiar el tamaño solo verticalmente */
+    min-height: 100px;                     /* Altura mínima para la descripción */
+}
+
+/* ==================== BOTÓN ==================== */
+button[type="submit"] {
+    background-color: #8b5a2b;             /* Marrón chocolate elegante */
+    color: white;                          /* Texto blanco */
+    padding: 14px 40px;                    /* Tamaño cómodo del botón */
+    font-size: 18px;                       /* Texto grande */
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;                       /* Cambia el cursor a mano */
+    margin-top: 15px;
+    transition: 0.3s;                      /* Suave animación al pasar el mouse */
+}
+
+button[type="submit"]:hover {
+    background-color: #6b4420;             /* Color más oscuro cuando pasas el mouse */
+    transform: scale(1.05);                /* Se agranda un poco */
+}
+
+/* Título del formulario */
+h3 {
+    color: #3c2f1e;                        /* Mismo marrón oscuro que los labels */
+    margin-bottom: 25px;
+    font-size: 28px;
+}
+
