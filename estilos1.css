@@ -1,5 +1,5 @@
 body{
-    background-color:gray; 
+    background-color:white  ; 
     
 }
 button{
@@ -31,7 +31,7 @@ p{
 h1{
     text-align:center ;
     padding: 10px;
-    font-size: 150px;
+    font-size: 90px;
     font-weight:bold ;
     font-family: 'Franklin Gothic Medium', 'Arial Narow',Arial, sans-serif;
 }
@@ -55,9 +55,11 @@ form {
 label {
     display: block;                        /* Cada label en una línea completa */
     text-align: left;                      /* Los textos de los labels se alinean a la izquierda */
-    margin-bottom: 8px;                    /* Espacio debajo del label */
-    font-weight: bold;                     /* Negrita para que resalten */
-    color: #3c2f1e;                        /* Color marrón oscuro elegante que combina perfecto con beige */
+    margin-bottom: 3px;                    /* Espacio debajo del label */
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;                     /* Negrita para que resalten */
+    color: green;         
+    font-size: 30px;               /* Color marrón oscuro elegante que combina perfecto con beige */
 }
 
 /* ==================== ESTILOS PARA LOS INPUTS Y TEXTAREA ==================== */
@@ -107,3 +109,15 @@ h3 {
     font-size: 28px;
 }
 
+button[type=button]{
+    background-color: green;
+    padding: 14px 40px;                    /* Tamaño cómodo del botón */
+    font-size: 20px;                       /* Texto grande */
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;                       /* Cambia el cursor a mano */
+    margin-top: 15px;
+    transition: 0.3s;   
+    margin-bottom: 16px;
+}
