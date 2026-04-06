@@ -9,7 +9,7 @@
     flex-wrap: wrap;                  /* Si no caben, bajan a la siguiente fila */
     padding: 50px 20px;
     min-height: 100vh;
-    background-color: #e0f7e0;        /* Fondo verde claro como césped */
+    background-color: lightblue;        /* Fondo verde claro como césped */
 }
 
 /* ============================================= */
@@ -54,11 +54,11 @@
     background-color: #ffeb3b;        /* Amarillo brillante (mejor que negro) */
     position: absolute;
     border-radius: 50%;
-    top: 70px;                        /* Posición vertical del centro */
-    left: 50%;
+    top: 35px;                        /* Posición vertical del centro */
+    left: 63%;
     transform: translateX(-50%);      /* Centrado horizontal perfecto */
     z-index: 10;                      /* Queda por encima de los pétalos */
-    box-shadow: 0 0 15px rgba(0,0,0,0.3); /* Sombra suave para que resalte */
+    
 }
 
 /* ============================================= */
@@ -70,10 +70,17 @@
     height: 150px;
     background-color: #4caf50;        /* Verde más natural */
     position: absolute;
-    top: 130px;                       /* Empieza debajo del centro */
-    left: 50%;
+    top: 110px;                       /* Empieza debajo del centro */
+    left: 63%;
     transform: translateX(-50%);
-    z-index: 1;                       /* Detrás de la flor */
-    border-radius: 10px;              /* Bordes suaves */
+    
+    
 }
 
+.suelo{
+    background-color: #4caf50;
+    width: 1850px;
+    height: 750px;
+    position: absolute;
+    top: 120%;
+}
