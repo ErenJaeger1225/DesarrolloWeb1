@@ -1,6 +1,6 @@
  let saldo = 1000;
     let saldoActual=0;
-    let contador = 0
+    
 
 
 
@@ -24,14 +24,14 @@ function retirar(){
     if(valor <=0){
         alert("Porfavor ingresa un valor positivo o mayor a 0");
     }else if(valor > saldo){
-        alert("tu saldo es unsuficiente:" + mostrarSaldo())
+        alert("tu saldo es unsuficiente:" + mostrarSaldo());
     }else{
         mostrarSaldo();
         resta = parseFloat(saldo) - parseFloat(valor);
         saldoActual = resta;
         saldo = saldoActual;
         alert("retiro exitoso");
-        alert("saldo actual: " + saldo)
+        alert("saldo actual: " + saldo);
     }
 }
 

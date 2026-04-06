@@ -1,0 +1,32 @@
+h1{
+    color: navy;
+    text-align: center;
+    font-size: 70px;
+    font-family: cursive;
+}
+body{
+    background-color: antiquewhite;
+}
+
+p {
+    text-align: center;
+    font-size: 25px;
+    display: flex;
+    color: black;
+    font-family: fantasy;
+}
+
+button{
+    background-color: navy;
+    padding: 14px 40px;                    /* Tamaño cómodo del botón */
+    font-size: 20px;                       /* Texto grande */
+    text-decoration: white;
+    border: black;
+    border-width: 10px;
+    border-radius: 8px;
+    cursor: pointer;                       /* Cambia el cursor a mano */
+    margin-top: 15px;
+    transition: 0.3s;   
+    margin-bottom: 16px;
+    
+}
