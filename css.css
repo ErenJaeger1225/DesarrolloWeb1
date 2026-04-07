@@ -82,5 +82,31 @@
     width: 1850px;
     height: 750px;
     position: absolute;
-    top: 120%;
+    top: 310%;
+}
+
+h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.contenedor-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 10px;
+    background-color: aqua;
+    height: 100vh;
+}
+.box-grid{
+    background-color: red;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5px;
+    border-radius: 10px;
+    height: 100px; 
+    text-color: black;
 }
