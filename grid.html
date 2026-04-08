@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="grid.css">
+</head>
+
+
+    <h1>Grid layout</h1><!-- titulo en el html -->
+    <div class="container"><!--contenedor grid-->
+        <div class="header">
+            <div class="Logo">Logo</div><!-- logo en el html -->
+            <nav class="nav"><!--navegación-->
+                <a href="a">home</a><!--redireccionar a la página a la que quiera-->
+                <a href="b">contact</a>
+                <a href="c">about</a>
+                <a href="d">services</a>
+            </nav>
+        </div>
+
+        <div class="menu"><!--menu - CORREGIDO: movido fuera de content para ser hijo directo de container-->
+            <ul><!--inicializar lista-->
+                <li><a href="#">Menu Item 1</a></li><!--elementos de la lista-->
+                <li><a href="#">Menu Item 2</a></li><!--elementos de la lista-->
+                <li><a href="#">Menu Item 3</a></li>
+                <li><a href="#">Menu Item 4</a></li>
+            </ul>
+        </div>
+        <div class="sidebar">sidebar</div><!--sidebar - CORREGIDO: movido fuera de content-->
+        <div class="main"><!--main-->
+            <table border="3"><!--tabla-->
+                <thead><!--cabecera-->
+                <tr><!--fila-->
+                    <th>Column 1</th><!--columna-->
+                    <th>Column 2</th>
+                    <th>Column 3</th>
+                </tr>
+                </thead>
+                <tbody><!--cuerpo-->
+                    <tr><!--fila-->
+                        <td>data 1</td><!--celda-->
+                        <td>data 2</td>
+                        <td>data 3</td>
+                    </tr>
+                    <tr><!--fila-->
+                        <td>data 1</td><!--celda-->
+                        <td>data 2</td>
+                        <td>data 3</td>
+                    </tr>
+                </tbody>
+                </table>
+        </div><!--main - CORREGIDO: movido fuera de content-->
+        <div class="content">content area</div><!--contenido principal - AGREGADO: área content separada-->
+        <div class="footer">
+            <p>&copy; 2026 My Website. All rights reserved.</p><!--copyright-->
+        </div><!--footer-->
+    </div>
+
+    
+</body>
+</html>

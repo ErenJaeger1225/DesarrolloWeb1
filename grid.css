@@ -1,0 +1,59 @@
+.container {
+  display: grid; /* Coloca los elementos como una cuadrícula */
+  grid-template-areas: /* Coloca las áreas de la cuadrícula */
+    "header header header" /*definir las áreas de la cuadrícula*/
+    "menu content content" /*definir el menú y el contenido*/
+    "sidebar content content" /*definir el sidebar y el contenido*/
+    "main content content" /*definir el main y el contenido*/
+    "footer footer footer"; /*definir el footer*/
+  grid-template-columns: 1fr 2fr 1fr; /* Coloca las columnas de la cuadrícula - CORREGIDO: sintaxis inválida de repeat() */
+  gap: 3px; /* Espacio entre los elementos de la cuadrícula */
+  background-color: aliceblue; /* Color de fondo */
+  padding: 5px; /* Espacio entre el contenido y el borde */
+}
+
+.container div {
+  background-color: beige; /* Color de fondo */
+  padding: 20px; /* Espacio entre el contenido y el borde */
+}
+.container .header {
+  grid-area: header; /* Coloca el header en la cuadrícula */
+  text-align: center; /* Alinea el header centrado */
+}
+.container .nav {
+  /* grid-area: nav; REMOVIDO: nav está dentro de header, no necesita grid-area separado */
+  text-align: center; /* Alinea el navegación centrado */
+  background-color: aliceblue; /* Color de fondo */
+}
+.container .menu {
+  grid-area: menu; /* Coloca el menú en la cuadrícula */
+  text-align: center; /* Alinea el menú centrado */
+}
+.container .sidebar {
+  grid-area: sidebar; /* Coloca el sidebar en la cuadrícula */
+  text-align: center; /* Alinea el sidebar centrado */
+}
+.container .main {
+  grid-area: main; /* Coloca el main en la cuadrícula */
+  text-align: center; /* Alinea el main centrado */  display: flex; /* AGREGADO: flexbox para centrar tabla */
+  justify-content: center; /* AGREGADO: centra horizontalmente */
+  align-items: center; /* AGREGADO: centra verticalmente */}
+.container .footer {
+  grid-area: footer; /* Coloca el footer en la cuadrícula */
+  text-align: center; /* Alinea el footer centrado */
+}
+.container .content {
+  grid-area: content; /* Coloca el contenido en la cuadrícula - AGREGADO: faltaba esta regla para el área content */
+}
+
+
+.container .content table {
+  border-collapse: collapse; /* Agrupa las celdas en una sola fila */
+  width: 100%; /* Ajusta el ancho del table a la anchura del contenido */
+}
+
+.container .main table {
+  /* AGREGADO: estilos para centrar tabla dentro de main */
+  border-collapse: collapse; /* Coloca los bordes*/
+  margin: 0 auto; /* Centra horizontalmente */
+}
