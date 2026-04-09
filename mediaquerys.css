@@ -1,0 +1,60 @@
+.card {
+    display: grid;/*definir el diseño de la tarjeta*/
+    grid-template-columns: 1fr;/*definir el ancho de las columnas*/
+    gap: 10px;/*definir el espacio entre las columnas*/
+    padding: 10px;/*definir el espacio entre el contenido y el borde*/
+    border: 1px solid #ccc;/*definir el borde de la tarjeta*/
+    border-radius: 5px;/*definir el radio de la tarjeta*/
+    max-width: 300px;/*definir el ancho máximo de la tarjeta*/
+}
+
+
+
+
+
+@media (min-width: 600px ) and (max-width: 899px){/*definir el diseño para pantallas más grandes*/
+    .card {
+        grid-template-columns: 1fr 1fr;/*definir el ancho de las columnas*/
+        background-color: lightblue;/*definir el fondo de la tarjeta*/
+        border: 1px solid #000;/*definir el borde de la tarjeta*/
+    }
+    img {/*definir el ancho de la imagen*/
+        width: 100%;/*definir el ancho de la imagen*/
+        height: auto;/*definir el alto de la imagen*/
+    }
+    button:hover {
+    color: white;
+    background-color: red;
+}   
+}
+
+@media (min-width: 900px){/*definir el diseño para pantallas más grandes*/
+    .card {/*cambiar el diseño para pantallas más grandes*/
+        display: grid;/*definir el diseño de la tarjeta*/
+        background-color: aquamarine;/*definir el fondo de la tarjeta*/
+        grid-template-columns: 1fr;/*definir el ancho de las columnas*/
+        gap: 10px;/*definir el espacio entre las columnas*/
+        padding: 20px;/*definir el espacio entre el contenido y el borde*/
+        border: 1px solid magenta;/*definir el borde de la tarjeta*/
+        border-radius: 5px;/*definir el radio de la tarjeta*/
+        max-width: 300px;/*definir el ancho máximo de la tarjeta*/
+    }
+    img {/*definir el ancho de la imagen*/
+        width: 100%;/*definir el ancho de la imagen*/
+        height: auto;/*definir el alto de la imagen*/
+    }
+}
+
+@media (min-width: 599px){/*definir el diseño para pantallas más grandes*/
+    .card {/*cambiar el diseño para pantallas más grandes*/        
+       display: block;/*definir el diseño de la tarjeta*/
+       background-color: aqua;/*definir el fondo de la tarjeta*/
+       padding: 10px;/*definir el espacio entre el contenido y el borde*/
+       border: 1px solid green;/*definir el borde de la tarjeta*/
+       border-radius: 5px;/*definir el radio de la tarjeta*/
+    }
+    img {/*definir el ancho de la imagen*/
+        width: 100%;/*definir el ancho de la imagen*/
+        height: auto;/*definir el alto de la imagen*/
+    }
+}

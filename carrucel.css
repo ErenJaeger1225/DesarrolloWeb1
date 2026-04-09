@@ -1,0 +1,70 @@
+body {
+    background-color: black;
+    margin: 0;
+    padding: 20px;
+}
+
+/* ==================== CARRUSEL ==================== */
+
+.carousel {
+    position: relative;              /* Necesario para posicionar botones absolutos */
+    width: 100%;
+    max-width: 1200px;               /* Puedes cambiarlo */
+    margin: 0 auto;                  /* Centrar el carrusel */
+    overflow: hidden;                /* Oculta el contenido que se sale */
+    border-radius: 10px;             /* Opcional: bordes redondeados */
+}
+
+.carousel-container {
+    display: flex;                   /* Flexbox para poner las slides una al lado de otra */
+    flex-wrap: nowrap;               /* Muy importante: no bajar las imágenes */
+    transition: transform 0.6s ease-in-out;  /* Suavidad al deslizar */
+    width: 100%;                     /* Ancho base */
+}
+
+.slide {
+    flex: 0 0 100%;                  /* Cada slide ocupa el 100% del ancho */
+    min-width: 100%;                 /* Compatibilidad extra */
+    box-sizing: border-box;
+}
+
+.slide img {
+    width: 100%;                     /* La imagen ocupa todo el slide */
+    height: auto;
+    display: block;                  /* Evita espacios debajo de la imagen */
+    display: flex;                   /* AGREGADO: flexbox para centrar imagen */
+    justify-content: center;         /* AGREGADO: centra horizontalmente */
+    align-items: center;             /* AGREGADO: centra verticalmente */
+}
+
+/* ==================== BOTONES ==================== */
+
+.prev-btn, .next-btn {
+    position: absolute;              /* Posicionamiento sobre el carrusel */
+    top: 35%;                        /* Centrar verticalmente */
+    transform: translateY(-50%);     /* Ajuste fino de centrado */
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    border: none;
+    font-size: 28px;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    z-index: 10;                     /* Para que estén por encima */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.prev-btn {
+    left: 15px;                      /* Posición del botón anterior */
+}
+
+.next-btn {
+    right: 15px;                     /* Posición del botón siguiente */
+}
+
+.prev-btn:hover, .next-btn:hover {
+    background-color: rgba(0, 0, 0, 0.9);
+}
