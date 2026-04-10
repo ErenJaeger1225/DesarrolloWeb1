@@ -1,0 +1,158 @@
+/* ==================== ESTILOS GENERALES ==================== */
+body {
+    background-color: #f0f0f0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 20px;                       /* Evita que el texto se pegue a los bordes */
+    line-height: 1.6;
+}
+
+h1 {
+    text-align: center;
+    color: #2c3e50;
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+h2 {
+    text-align: center;
+    color: #2c3e50;
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+/* ===================== NAVBAR ===================== */
+.nav {
+    background-color: #34495e;     /* Color de fondo del recuadro */
+    padding: 15px 20px;            /* Espacio interno */
+    border-radius: 12px;           /* Bordes redondeados */
+    margin: 20px auto;             /* Centrado y separación */
+    max-width: auto;              /* Evita que quede muy ancho */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para que resalte */
+}
+
+.nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;                 /* ← Esto es lo importante */
+    justify-content: center;       /* Centra horizontalmente */
+    flex-wrap: wrap;               /* Se acomoda en celular */
+    gap: 25px;                     /* Espacio entre los enlaces */
+}
+
+.nav li {
+    margin: 0;
+}
+
+.nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    padding: 10px 18px;
+    border-radius: 8px;
+}
+
+/* ==================== IMAGEN ==================== */
+.mi-foto {
+    display: block;
+    margin: 20px auto;
+    border-radius: 15px;           /* Borde redondeado */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    max-width: 100%;
+    height: auto;
+}
+
+/* ==================== VIDEO RESPONSIVE ==================== */
+/* ===================== VIDEO MÁS GRANDE ===================== */
+.video {
+    display: block;
+    margin: 30px auto;           /* centrado con más espacio arriba/abajo */
+    width: 90%;                  /* ancho grande */
+    max-width: 1100px;           /* no se pase de este tamaño en pantallas grandes */
+    height: 500px;               /* ← Esto es lo más importante: altura */
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    background-color: #000;
+}
+
+/* Para que mantenga buena proporción en celulares */
+@media (max-width: 768px) {
+    .video {
+        width: 95%;
+        height: 320px;           /* altura más razonable en celular */
+    }
+}
+
+@media (max-width: 480px) {
+    .video {
+        height: 260px;
+    }
+}
+
+/* ==================== SECCIÓN HABILIDADES ==================== */
+.habilidades {
+    background-color: #e8f0fe;     /* Color diferente */
+    padding: 25px;
+    border-radius: 12px;
+    margin: 30px auto;
+    max-width: 800px;
+}
+
+.habilidades h2 {
+    text-align: center;
+    color: #2c3e50;
+}
+
+.habilidades ul {
+    list-style: none;
+    padding: 0;
+}
+
+.habilidades li {
+    padding: 10px 0;
+    font-size: 1.1rem;
+}
+
+/* ==================== CONTENEDOR SOBRE MÍ ==================== */
+.contenedor {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin: 30px 0;
+}
+
+.yo, .yo2 {
+    background-color: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 45%;
+    min-width: 300px;
+}
+
+/* ==================== FOOTER ==================== */
+footer {
+    text-align: center;
+    margin-top: 50px;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+/* Enlace social */
+.red-social {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.red-social a {
+    color: #e74c3c;
+    font-weight: bold;
+    text-decoration: none;
+}
+.discord-logo{
+    width: 200px;
+    height: 100px;
+}
