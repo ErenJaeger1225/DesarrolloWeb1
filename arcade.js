@@ -61,11 +61,11 @@ function adivinarNumero() {
         juegoTerminado = true;
     } 
     else if (numeroIntento > numeroSecreto) {
-        pistas.textContent = "El número es menor ⬇️";
+        pistas.textContent = "El número es menor";
         pistas.style.color = "orange";
     } 
     else {
-        pistas.textContent = "El número es mayor ⬆️";
+        pistas.textContent = "El número es mayor";
         pistas.style.color = "orange";
     }
 
