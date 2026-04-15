@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Entrada al arcade</title>
+    <link rel="stylesheet" href="estilo.css" />
+  </head>
+  <body>
+    <h1 id="h1">Bienvenido al Arcade</h1>
+    <!--Título-->
+    <p>INGRESA TU EDAD Y TU CODIGO(SI TIENES UNO)</p>
+    <!--Instrucciones-->
+    <input
+      type="number"
+      id="edadUsuario"
+      placeholder="Ingresa tu edad"
+    /><!--cuadro de entrada de texto parta la edad con si id que es un valor unico del input-->
+    <input
+      type="text"
+      id="codigoUsuario"
+      placeholder="Ingresa tu codigo"
+    /><!--cuadro de entrada de texto parta la codigo con si id que es un valor unico del input-->
+    <button onclick="verificarEntrada()">Comprobar</button
+    ><!--Botón para comprobar la entrada-->
+
+    <h2 id="mensajeFinal">Esperando datos...</h2>
+    <!--Mensaje de salida-->
+    <hr style="margin: 30px 0" />
+    <!--Linea horizontal-->
+    <div class="maquina-juegos">
+      <h2>Mini juego adivina el numero</h2>
+      <p>seleccione una dificultad</p>
+      <select id="dificultad" onchange="iniciarJuego()">
+        <option value="0">--Elige una dificultad--</option>
+        <!--Opciones de dificultad-->
+        <option value="10">Facil ♥ (1-10) - 3 vidas</option>
+        <option value="50">Medio (1-50) - 5 vidas</option>
+        <option value="100">Dificultad alta (1-100) - 7 vidas</option>
+        </select><!--seleccion de dificultad onchange sirve para cabiar el evento de cambio de valor-->
+        <br><br>
+        <div id="zonaAdivinanza">
+            <p id="pistaJuego">Estoy pensando en un numero ..... ¿Cual crees que es?</p>
+            <input type="number" id=numeroIntento placeholder="Ingresa tu numero">
+            <button onclick="adivinarNumero()">Adivinar</button>
+            <h3 id="resultadoAdivinanza"></h3>
+            <h3 id="intentosRestantes"></h3>
+        </div>
+    </div>
+    <script src="arcade.js"></script>
+  </body>
+</html>
