@@ -1,0 +1,85 @@
+/* Selector universal: aplica a todos los elementos, resetea márgenes y padding, y establece box-sizing para incluir bordes y padding en el ancho/alto */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos para el cuerpo de la página: fuente Arial, fondo oscuro, centrado vertical y horizontal */
+body {
+    font-family: Arial, sans-serif;
+    background: #222;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Estilos para el contenedor de la calculadora: fondo gris oscuro, padding, bordes redondeados, sombra */
+.calculadora {
+    background: #333;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+    width: 300px;
+}
+
+/* Estilos para el display de la calculadora: ancho completo, altura fija, fuente grande, alineación derecha, fondo negro, texto blanco, sin borde, bordes redondeados, margen inferior */
+#display {
+    width: 100%;
+    height: 70px;
+    font-size: 2rem;
+    text-align: right;
+    padding: 10px;
+    background: #000;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+/* Estilos para el contenedor de botones: usa grid con 4 columnas iguales, con espacio entre botones */
+.botones {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+/* Estilos generales para todos los botones: altura fija, fuente grande, sin borde, bordes redondeados, cursor pointer, transición de opacidad */
+button {
+    height: 60px;
+    font-size: 1.4rem;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+/* Efecto hover para botones: reduce opacidad al pasar el mouse */
+button:hover {
+    opacity: 0.85;
+}
+
+/* Colores específicos para botones de números: fondo gris medio, texto blanco */
+.numero {
+    background: #555;
+    color: white;
+}
+
+/* Colores específicos para botones de operadores: fondo naranja, texto blanco */
+.operador {
+    background: #ff9500;
+    color: white;
+}
+
+/* Colores específicos para el botón igual: fondo verde, texto blanco */
+.igual {
+    background: #00d26a;
+    color: white;
+}
+
+/* Colores específicos para botones de limpiar: fondo rojo, texto blanco */
+.clear {
+    background: #f00;
+    color: white;
+}

@@ -1,0 +1,308 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image: url("https://static5.depositphotos.com/1003494/456/i/450/depositphotos_4564054-stock-photo-golden-artistic-fabric-background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: #333;
+    line-height: 1.6;
+    
+    /* === IMPORTANTE PARA QUE EL FOOTER QUEDE ABAJO === */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* NAVEGACIÓN */
+.main-nav {
+    position: sticky;
+    top: 0;
+    background-color: rgba(62, 39, 35, 0.95);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 0 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    flex-wrap: wrap;
+}
+
+.container-logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.Logo-img {
+    height: 55px;
+    width: auto;
+}
+
+.Logo {
+    color: #EBB866;
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.main-ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.main-ul li a {
+    display: block;
+    padding: 14px 18px;
+    color: #EBB866;
+    text-decoration: none;
+    font-weight: 500;
+    border-radius: 8px;
+    transition: all 0.3s;
+}
+
+.main-ul li a:hover {
+    background-color: rgba(235, 184, 102, 0.2);
+    color: white;
+}
+
+/* ====================== CONTENIDO (NUEVO) ====================== */
+
+.content {
+    flex: 1;                    /* Empuja el footer hacia abajo */
+    max-width: 900px;
+    margin: 80px auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+/* Título grande */
+.title {
+    font-size: 3.2rem;
+    color: #3E2723;
+    margin-bottom: 25px;
+    text-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Subtítulo */
+.subtitle {
+    text-align: center;
+    color: #5D4037;
+    margin: 30px 0 15px;
+    font-size: 1.8rem;
+}
+
+/* Párrafo */
+.paragraph {
+    font-size: 1.25rem;
+    line-height: 1.8;
+    color: #4A3728;
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* ====================== FOOTER ====================== */
+
+.footer {
+    margin-top: auto;          
+    background-color: #3E2723;
+    color: #EBB866;
+    text-align: center;
+    padding: 30px 20px;
+    width: 100%;
+}
+
+.footer p {
+    margin-bottom: 12px;
+}
+
+.footer-ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.footer-ul a {
+    color: #EBB866;
+    text-decoration: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .main-nav {
+        flex-direction: column;
+        padding: 15px;
+    }
+    
+    .main-ul {
+        margin-top: 15px;
+    }
+    
+    .title {
+        font-size: 2.4rem;
+    }
+    
+    .content {
+        margin: 50px auto;
+    }
+}
+
+.container-email {
+    display: flex;
+    justify-content: center;
+}
+/* ==================== CARRUSEL ACOPLADO Y RESPONSIVE ==================== */
+.carousel-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 60px;
+    flex-wrap: nowrap; /* Por defecto en escritorio van de lado */
+    text-align: left; /* Alinea la descripción a la izquierda */
+    padding: 0 20px;
+}
+
+.carousel-container {
+    position: relative; /* CRUCIAL: Los botones se posicionan respecto a esto */
+    overflow: hidden;
+    border-radius: 20px;
+    flex: 1.6; /* La imagen ocupa más espacio */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    /* Eliminé el padding interno para que la imagen llegue al borde */
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+}
+
+.slide {
+    min-width: 100%;
+    box-sizing: border-box;
+}
+
+.slide img {
+    width: 100%;
+    height: 450px; /* Altura fija para uniformidad en escritorio */
+    display: block;
+    object-fit: cover; /* Recorta la imagen para llenar el espacio sin deformar */
+}
+
+/* --- BOTONES (ENCIMA DE LA IMAGEN) --- */
+.izquierda, .derecha {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(235, 184, 102, 0.8); /* Semi-transparente */
+    color: #3E2723;
+    border: none;
+    font-size: 24px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 10; /* Asegura que estén arriba de la imagen */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    transition: all 0.3s ease;
+}
+
+/* Posiciones dentro del container de la imagen */
+.izquierda { left: 15px; }
+.derecha { right: 15px; } 
+
+.izquierda:hover, .derecha:hover {
+    background-color: rgba(62, 39, 35, 0.9);
+    color: #EBB866;
+    transform: translateY(-50%) scale(1.1);
+}
+
+/* Descripción al lado */
+.descripcion {
+    flex: 1;
+    background-color: rgba(255,255,255,0.9);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    border-left: 5px solid #EBB866;
+}
+
+.description {
+    font-size: 1.15rem;
+    color: #4A3728;
+    line-height: 1.8;
+}
+
+/* ============================== RESPONSIVE TOTAL ============================== */
+
+/* Tablets y Laptops pequeñas */
+@media (max-width: 1024px) {
+    .slide img {
+        height: 350px; /* Reducimos altura de imagen */
+    }
+}
+
+/* Móviles (Vertical) */
+@media (max-width: 768px) {
+    .main-nav {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .Logo { font-size: 1.5rem; }
+    
+    .title { font-size: 2.5rem; }
+
+    .carousel-wrapper {
+        flex-direction: column; /* IMAGEN ARRIBA, DESCRIPCIÓN ABAJO */
+        gap: 20px;
+        padding: 0 15px;
+    }
+    
+    .carousel-container {
+        width: 100%;
+        border-radius: 15px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+    }
+
+    .slide img {
+        height: 250px; /* Altura más pequeña para móviles */
+        border-radius: 15px;
+    }
+
+    /* Botones más pequeños en móvil */
+    .izquierda, .derecha {
+        width: 40px;
+        height: 40px;
+        font-size: 18px;
+        background-color: rgba(235, 184, 102, 0.9); /* Más opaco */
+    }
+    
+    .descripcion {
+        width: 100%;
+        margin-top: 10px;
+        padding: 20px;
+        border-left: none;
+        border-top: 5px solid #EBB866; /* Cambio de borde */
+    }
+}

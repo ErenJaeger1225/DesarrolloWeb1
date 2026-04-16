@@ -47,6 +47,25 @@
             <h3 id="intentosRestantes"></h3>
         </div>
     </div>
+
+   <div class="mochila-container">
+  <div class="buscador-container" style="margin-bottom: 20px;">
+    <input type="text" id="inputBusqueda" placeholder="Buscar en mochila..." oninput="buscarObjeto()">
+  </div>
+
+  <div class="controles">
+    <input type="text" id="nuevoObjeto" placeholder="Madera">
+    <button onclick="recogerObjeto()" class="btn-recoger">Recoger objeto</button>
+  </div>
+  
+  <div class="controlesExtra">
+    <button onclick="tirarUltimo()" class="btn-tirar">Tirar Último</button>
+  </div>
+
+  <h3 id="contadorEspacio">Objetos en la mochila: 0/10</h3>
+  <ul id="listaINventario"></ul>
+  <p id="mensajeSistema"></p>
+</div>
     <script src="arcade.js"></script>
   </body>
 </html>
