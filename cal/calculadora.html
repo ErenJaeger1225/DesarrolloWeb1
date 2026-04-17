@@ -1,0 +1,81 @@
+<!doctype html>
+<!-- Declara que es un documento HTML5 -->
+<html lang="es">
+  <!-- Abre la etiqueta html y define el idioma como español -->
+  <head>
+    <!-- Abre la sección de encabezado -->
+    <meta charset="UTF-8" />
+    <!-- Define la codificación de caracteres -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Hace la página responsive -->
+    <title>Calculadora Simple</title>
+    <!-- Título que aparece en la pestaña del navegador -->
+    <link rel="stylesheet" href="calculadora.css" />
+    <!-- Enlaza el archivo CSS -->
+  </head>
+  <!-- Cierra la sección head -->
+  <body>
+    <!-- Abre el cuerpo de la página -->
+
+    <div class="calculadora">
+      <!-- Contenedor principal de la calculadora -->
+
+      <input type="text" id="pantalla" class="pantalla" readonly />
+      <!-- Pantalla de la calculadora -->
+
+      <div class="botones">
+        <!-- Contenedor de todos los botones -->
+        <!-- Fila 1 -->
+        <button class="boton" onclick="limpiar()">C</button>
+        <!-- Botón Limpiar -->
+        <button class="boton" onclick="borrarUno()">⌫</button>
+        <!-- Botón Borrar último dígito -->
+        <button class="boton" onclick="agregar('/')">/</button>
+        <!-- Botón División -->
+        <button class="boton" onclick="agregar('*')">×</button>
+        <!-- Botón Multiplicación -->
+
+        <!-- Fila 2 -->
+        <button class="boton" onclick="agregar('7')">7</button>
+        <!-- Botón número 7 -->
+        <button class="boton" onclick="agregar('8')">8</button>
+        <!-- Botón número 8 -->
+        <button class="boton" onclick="agregar('9')">9</button>
+        <!-- Botón número 9 -->
+        <button class="boton" onclick="agregar('-')">−</button>
+        <!-- Botón Resta -->
+
+        <!-- Fila 3 -->
+        <button class="boton" onclick="agregar('4')">4</button>
+        <!-- Botón número 4 -->
+        <button class="boton" onclick="agregar('5')">5</button>
+        <!-- Botón número 5 -->
+        <button class="boton" onclick="agregar('6')">6</button>
+        <!-- Botón número 6 -->
+        <button class="boton" onclick="agregar('+')">+</button>
+        <!-- Botón Suma -->
+
+        <!-- Fila 4 -->
+        <button class="boton" onclick="agregar('1')">1</button>
+        <!-- Botón número 1 -->
+        <button class="boton" onclick="agregar('2')">2</button>
+        <!-- Botón número 2 -->
+        <button class="boton" onclick="agregar('3')">3</button>
+        <!-- Botón número 3 -->
+        <button class="boton igual" onclick="calcular()">=</button>
+        <!-- Botón Resultado -->
+
+        <!-- Fila 5 -->
+        <button class="boton cero" onclick="agregar('0')">0</button>
+        <!-- Botón número 0 (más ancho) -->
+        <button class="boton" onclick="agregar('.')">.</button>
+        <!-- Botón Punto decimal -->
+      </div>
+    </div>
+
+    <script src="calculadora.js"></script>
+    <!-- Enlaza el archivo JavaScript -->
+  </body>
+  <!-- Cierra el body -->
+</html>
+<!-- Cierra el html -->

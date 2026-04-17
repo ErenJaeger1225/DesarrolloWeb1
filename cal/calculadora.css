@@ -1,0 +1,68 @@
+* {
+  margin: 0; /* Elimina márgenes predeterminados del navegador */
+  padding: 0; /* Elimina relleno predeterminado */
+  box-sizing: border-box; /* Hace que el padding y border se incluyan en el ancho total */
+}
+
+body {
+  background: #1e1e2f; /* Color de fondo de toda la página */
+  display: flex; /* Activa flexbox para centrar la calculadora */
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center; /* Centra verticalmente */
+  min-height: 100vh; /* Ocupa el 100% de la altura de la pantalla */
+  font-family: Arial, sans-serif; /* Fuente de texto */
+}
+
+.calculadora {
+  background: #2c2c3a; /* Color de fondo de la calculadora */
+  padding: 20px; /* Espacio interno alrededor */
+  border-radius: 20px; /* Bordes redondeados de la calculadora */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); /* Sombra alrededor de la calculadora */
+  width: 320px; /* Ancho fijo de la calculadora */
+}
+
+.pantalla {
+  width: 100%; /* Ocupa todo el ancho disponible */
+  height: 80px; /* Altura de la pantalla */
+  font-size: 2.5rem; /* Tamaño grande del texto */
+  text-align: right; /* Alinea el texto a la derecha */
+  padding: 15px; /* Espacio interno */
+  margin-bottom: 15px; /* Espacio debajo de la pantalla */
+  border: none; /* Quita el borde */
+  border-radius: 12px; /* Bordes redondeados */
+  background: #1e1e2f; /* Color de fondo de la pantalla */
+  color: white; /* Color del texto */
+}
+
+.botones {
+  display: grid; /* Organiza los botones en forma de cuadrícula */
+  grid-template-columns: repeat(4, 1fr); /* Crea 4 columnas iguales */
+  gap: 10px; /* Espacio entre los botones */
+}
+
+.boton {
+  height: 70px; /* Altura de cada botón */
+  font-size: 1.5rem; /* Tamaño del texto en los botones */
+  border: none; /* Sin borde */
+  border-radius: 12px; /* Bordes redondeados */
+  background: #3d3d52; /* Color de fondo de los botones */
+  color: white; /* Color del texto */
+  cursor: pointer; /* Cambia el cursor a mano */
+  transition: all 0.2s; /* Efecto suave al pasar el mouse */
+}
+
+.boton:hover {
+  background: #4a4a66; /* Color al pasar el mouse por encima */
+}
+
+.igual {
+  background: #ff9500; /* Color naranja para el botón igual */
+}
+
+.igual:hover {
+  background: #ffb143; /* Color al pasar mouse sobre el botón igual */
+}
+
+.cero {
+  grid-column: span 2; /* El botón 0 ocupa el espacio de 2 columnas */
+}
